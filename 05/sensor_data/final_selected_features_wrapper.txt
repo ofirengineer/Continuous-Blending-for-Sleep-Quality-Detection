@@ -1,0 +1,10 @@
+acc_night_wake_up_count
+light_night_mean
+call_duration_sum
+wifi_night_changes
+acc_x_std
+last_call_to_sleep
+light_night_sudden_spikes_count
+acc_magnitude_min
+acc_night_significant_movements
+light_mean

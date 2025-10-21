@@ -1,0 +1,339 @@
+{
+  "sensor_types": [
+    "accelerometer",
+    "calls",
+    "light",
+    "location",
+    "screen",
+    "wifi"
+  ],
+  "sensor_features": {
+    "accelerometer": {
+      "features": [
+        {
+          "name": "num_significant_movements_night",
+          "description": "Count of movements where sqrt(x²+y²+z²) > 1 m/s² during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "still_time_night",
+          "description": "Duration (minutes) where acceleration ~9.81 m/s² (±0.5) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "mean_acc_energy_night",
+          "description": "Mean of (x²+y²+z²) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "std_acc_night",
+          "description": "Standard deviation of sqrt(x²+y²+z²) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "max_acc_night",
+          "description": "Maximum sqrt(x²+y²+z²) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "num_significant_movements_evening",
+          "description": "Count of movements > 1 m/s² during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "mean_acc_energy_evening",
+          "description": "Mean of (x²+y²+z²) during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "std_acc_evening",
+          "description": "Standard deviation of sqrt(x²+y²+z²) during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "max_acc_evening",
+          "description": "Maximum sqrt(x²+y²+z²) during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "num_significant_movements_morning",
+          "description": "Count of movements > 1 m/s² during morning",
+          "window": "6:00–12:00"
+        },
+        {
+          "name": "mean_acc_energy_morning",
+          "description": "Mean of (x²+y²+z²) during morning",
+          "window": "6:00–12:00"
+        },
+        {
+          "name": "std_acc_morning",
+          "description": "Standard deviation of sqrt(x²+y²+z²) during morning",
+          "window": "6:00–12:00"
+        },
+        {
+          "name": "max_acc_morning",
+          "description": "Maximum sqrt(x²+y²+z²) during morning",
+          "window": "6:00–12:00"
+        },
+        {
+          "name": "num_significant_movements_afternoon",
+          "description": "Count of movements > 1 m/s² during afternoon",
+          "window": "12:00–18:00"
+        },
+        {
+          "name": "mean_acc_energy_afternoon",
+          "description": "Mean of (x²+y²+z²) during afternoon",
+          "window": "12:00–18:00"
+        },
+        {
+          "name": "std_acc_afternoon",
+          "description": "Standard deviation of sqrt(x²+y²+z²) during afternoon",
+          "window": "12:00–18:00"
+        },
+        {
+          "name": "max_acc_afternoon",
+          "description": "Maximum sqrt(x²+y²+z²) during afternoon",
+          "window": "12:00–18:00"
+        },
+        {
+          "name": "mean_acc_x_night",
+          "description": "Mean of x-axis acceleration during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "mean_acc_y_night",
+          "description": "Mean of y-axis acceleration during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "mean_acc_z_night",
+          "description": "Mean of z-axis acceleration during night",
+          "window": "00:00–6:00"
+        }
+      ],
+      "required_statistics": [
+        "x, y, z values for calculating magnitude sqrt(x²+y²+z²)",
+        "Timestamps for temporal window segmentation",
+        "Count of samples where magnitude > 1 m/s²",
+        "Mean, standard deviation, and maximum of magnitude per window",
+        "Mean of x, y, z per window"
+      ],
+      "sample_count": 3855,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    },
+    "calls": {
+      "features": [
+        {
+          "name": "num_calls_evening",
+          "description": "Count of calls during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "call_duration_evening",
+          "description": "Total call duration (minutes) during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "num_calls_night",
+          "description": "Count of calls during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "call_duration_night",
+          "description": "Total call duration (minutes) during night",
+          "window": "00:00–6:00"
+        }
+      ],
+      "required_statistics": [
+        "Count of calls per window",
+        "Sum of call durations (value) per window",
+        "Timestamps for temporal window segmentation"
+      ],
+      "sample_count": 460,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    },
+    "light": {
+      "features": [
+        {
+          "name": "mean_light_evening",
+          "description": "Mean light intensity (Lux) during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "time_high_light_evening",
+          "description": "Duration (minutes) with Lux > 100 during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "mean_light_night",
+          "description": "Mean light intensity (Lux) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "time_light_night",
+          "description": "Duration (minutes) with Lux > 0 during night",
+          "window": "00:00–6:00"
+        }
+      ],
+      "required_statistics": [
+        "Lux values for mean calculations",
+        "Count of samples where Lux > 100 or Lux > 0",
+        "Timestamps for temporal window segmentation"
+      ],
+      "sample_count": 2982,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    },
+    "location": {
+      "features": [],
+      "required_statistics": [],
+      "sample_count": 3177,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    },
+    "screen": {
+      "features": [],
+      "required_statistics": [],
+      "sample_count": 8469,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    },
+    "wifi": {
+      "features": [
+        {
+          "name": "time_at_home_night",
+          "description": "Duration (minutes) connected to home network (RSSI > -60 dBm) during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "num_unique_locations_day",
+          "description": "Count of unique suuid during day",
+          "window": "6:00–00:00"
+        },
+        {
+          "name": "mean_rssi_night",
+          "description": "Mean RSSI during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "std_rssi_night",
+          "description": "Standard deviation of RSSI during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "max_rssi_night",
+          "description": "Maximum RSSI during night",
+          "window": "00:00–6:00"
+        },
+        {
+          "name": "location_transitions_evening",
+          "description": "Count of suuid changes during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "time_at_home_evening",
+          "description": "Duration (minutes) at home network during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "num_unique_networks_evening",
+          "description": "Count of unique suuid during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "mean_rssi_evening",
+          "description": "Mean RSSI during evening",
+          "window": "18:00–00:00"
+        },
+        {
+          "name": "std_rssi_evening",
+          "description": "Standard deviation of RSSI during evening",
+          "window": "18:00–00:00"
+        }
+      ],
+      "required_statistics": [
+        "RSSI values for mean, std, max calculations",
+        "suuid for counting unique networks and transitions",
+        "Timestamps for temporal window segmentation",
+        "Duration of connection to specific suuid (home network)"
+      ],
+      "sample_count": 41294,
+      "sample_columns": [
+        "uid",
+        "datetime",
+        "type",
+        "sub_type",
+        "suuid",
+        "level",
+        "value",
+        "sensor_status",
+        "x",
+        "y",
+        "z",
+        "data"
+      ]
+    }
+  }
+}
