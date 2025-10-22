@@ -64,25 +64,6 @@ Hyperparameter tuning yielded:
 
 ---
 
-## 📈 Visualizations
-
-### **1. Prediction vs. Actual**
-*Scatter plot comparing predicted vs. actual restfulness scores.*
-
-![Prediction vs. Actual Scatter Plot](05/assets/prediction_vs_actual.png)
-
-### **2. Feature Importance**
-*Bar chart showing the relative importance of the top 10 selected features.*
-
-![Feature Importance Bar Chart](05/assets/feature_importance.png)
-
-### **3. Error Distribution**
-*Histogram and box plot of model prediction errors (Actual - Predicted).*
-
-![Error Distribution Plot](05/assets/error_distribution.png)
-
----
-
 ## 🧠 Model Robustness Analysis
 
 ### **Weekday vs. Weekend**
